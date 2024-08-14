@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Copy Docker Images
-      uses: liangxiong3403/docker-sync-action@main
+      uses: liangxiong3403/sync-docker-image@main
       with:
         source: ${{ github.event.inputs.source }}
         source-credential: ${{ secrets.SOURCE_CREDENTIAL }}
