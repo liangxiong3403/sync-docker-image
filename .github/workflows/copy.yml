@@ -10,7 +10,7 @@ on:
       destination:
         description: '目标源 (Registry)'
         required: true
-        default: 'registry.cn-beijing.aliyuncs.com'
+        default: 'registry.cn-chengdu.aliyuncs.com'
       source_repo:
         description: '仓库及标签 (格式 repo:tag)'
         required: true
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Copy Docker Images
-      uses: ikrong/docker-sync-action@main
+      uses: liangxiong3403/docker-sync-action@main
       with:
         source: ${{ github.event.inputs.source }}
         source-credential: ${{ secrets.SOURCE_CREDENTIAL }}
